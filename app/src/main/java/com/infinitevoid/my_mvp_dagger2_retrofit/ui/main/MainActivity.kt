@@ -30,6 +30,8 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     }
 
     override fun showData(list: UserList) {
-        main_text_view.text = list.total_count.toString()
+        list.users.forEach {
+            main_text_view.text = it.login.plus(main_text_view.text)
+        }
     }
 }
