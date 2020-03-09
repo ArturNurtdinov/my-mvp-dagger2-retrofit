@@ -8,7 +8,7 @@ class MainContract {
         fun showData(list : UserList)
     }
 
-    interface Presenter : BaseContract.Presenter<MainContract.View> {
+    interface Presenter : BaseContract.Presenter<View> {
         fun loadData()
     }
 }
