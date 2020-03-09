@@ -21,11 +21,8 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     }
 
     private fun injectDependency() {
-        val activityComponent = DaggerActivityComponent.builder()
-            .activityModule(ActivityModule(this))
-            .build()
+        DaggerActivityComponent.create().inject(this)
 
-        activityComponent.inject(this)
         presenter.attach(this)
     }
 
