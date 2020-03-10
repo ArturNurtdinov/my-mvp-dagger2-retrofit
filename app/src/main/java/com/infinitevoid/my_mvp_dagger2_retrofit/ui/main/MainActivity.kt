@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.infinitevoid.my_mvp_dagger2_retrofit.R
 import com.infinitevoid.my_mvp_dagger2_retrofit.di.component.DaggerActivityComponent
-import com.infinitevoid.my_mvp_dagger2_retrofit.di.module.ActivityModule
 import com.infinitevoid.my_mvp_dagger2_retrofit.models.UserList
 import kotlinx.android.synthetic.main.activity_main.*
 
