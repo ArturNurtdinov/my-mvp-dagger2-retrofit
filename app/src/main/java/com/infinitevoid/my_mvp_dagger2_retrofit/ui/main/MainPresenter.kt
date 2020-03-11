@@ -15,6 +15,7 @@ class MainPresenter : MainContract.Presenter {
 
     private val subscriptions = CompositeDisposable()
     lateinit var view: MainContract.View
+
     @Inject
     lateinit var api: ApiServiceInterface
 
