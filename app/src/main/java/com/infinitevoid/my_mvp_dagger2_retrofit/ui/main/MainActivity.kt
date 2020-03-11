@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
 
     override fun showData(list: UserList) {
         list.users.forEach {
-            main_text_view.text = it.login.plus(main_text_view.text)
+            main_text_view.text = main_text_view.text.toString().plus(resources.getString(R.string.login_placeholder, it.login))
         }
     }
 }
