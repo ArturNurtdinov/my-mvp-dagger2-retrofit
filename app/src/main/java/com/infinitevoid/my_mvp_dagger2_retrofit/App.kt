@@ -3,7 +3,6 @@ package com.infinitevoid.my_mvp_dagger2_retrofit
 import android.app.Application
 import com.infinitevoid.my_mvp_dagger2_retrofit.di.component.ApplicationComponent
 import com.infinitevoid.my_mvp_dagger2_retrofit.di.component.DaggerApplicationComponent
-import com.infinitevoid.my_mvp_dagger2_retrofit.di.module.ApplicationModule
 
 class App : Application() {
     lateinit var component: ApplicationComponent
@@ -16,9 +15,7 @@ class App : Application() {
     }
 
     private fun setup() {
-        component = DaggerApplicationComponent.builder()
-            .applicationModule(ApplicationModule(this)).build()
-        component.inject(this)
+        DaggerApplicationComponent.create().inject(this)
     }
 
     companion object {
