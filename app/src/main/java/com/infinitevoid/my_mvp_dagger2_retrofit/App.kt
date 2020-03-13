@@ -1,11 +1,9 @@
 package com.infinitevoid.my_mvp_dagger2_retrofit
 
 import android.app.Application
-import com.infinitevoid.my_mvp_dagger2_retrofit.di.component.ApplicationComponent
 import com.infinitevoid.my_mvp_dagger2_retrofit.di.component.DaggerApplicationComponent
 
 class App : Application() {
-    lateinit var component: ApplicationComponent
 
     override fun onCreate() {
         super.onCreate()
